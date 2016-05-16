@@ -23,7 +23,7 @@
 	<br><br><br>
 	<font size="6" id="problem"></font>
 	<br>
-	<canvas id="timer" width = 1000 height = 30></canvas>
+	<canvas id="timer" width=1000 height=30></canvas>
 	<div id="answer"></div>
 </body>
 </html>
