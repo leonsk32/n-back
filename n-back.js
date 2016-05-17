@@ -69,7 +69,7 @@ function next(){
 		var o;
 		if (operator) o = "＋";
 		else o = "ー";
-		problem = x.toString() + "  " + o.toString() + "  " + y.toString() + "  ＝  ";
+		problem = x.toString() + "  " + o + "  " + y.toString() + "  ＝  ";
 		$("#problem").text(problem + ans2str(answer));
 		start = new Date();
 		intervalID = setInterval(drawTimer, 100);
@@ -90,7 +90,7 @@ $(function() {
 	});
 
 	document.onkeydown = function (e){
-		key = e.keyCode;
+		var key = e.keyCode;
 		//数字
 		if(key >= 48 && key <= 57){
 			if(answer == null) answer = 0;
