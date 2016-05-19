@@ -53,6 +53,8 @@ function drawTimer(){
 }
 
 function next(){
+	clearTimeout(timerID);
+	clearInterval(intervalID);
 	if (index > n){
 		if (answers[0] == answer) score++;
 	}
@@ -83,6 +85,8 @@ $(function() {
 	init(3,30,5);
 	$("#problem").text(n + " back × " + max + " problems × " + timeout + " seconds");
 	$("#restart").click(function(){
+		clearTimeout(timerID);
+		clearInterval(intervalID);
 		init(Number(document.getElementById("n").value), Number(document.getElementById("numProblems").value), Number(document.getElementById("timeLimit").value));
 		index = 0;
 		score = 0;
@@ -99,8 +103,6 @@ $(function() {
 		}
 		//Enter
 		else if(key == 13){
-			clearTimeout(timerID);
-			clearInterval(intervalID);
 			next();
 		}
 		//Space
